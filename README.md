@@ -42,6 +42,5 @@ Hello AD demo passed to docker!
 1.  Create ECR repository
 
 ### More things Do
-
-* Lint the code with Github Actions (see the Makefile)
+Lint the code with Github Actions (see the Makefile)
 * Automatically build the container after lint, and push to DockerHub or some other Container Registery
