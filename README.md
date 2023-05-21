@@ -23,32 +23,25 @@ This is building a container from scratch
 `docker push <ECR>/<Container repo>:<tagname>`
 When repo generated, you have docker commands provided by AWS, in case you use ECR as docker repo
 
-## Run it yourself
-
-```bash
+## Run it yourself at container
+```
 docker pull <ECR>/<Container repo>:<tagname>
 docker run -it <ECR>/<Container repo>:<tagname> bash 
-
-#then run python app.py --help
+# Then 
+run python app.py --name "Hello AD demo docker from bash at docker"
 ```
 
-## Pass in a command
-
-```bash
-docker run -it noahgift/cloudapp python app.py --name "Big John"
-#the output
-Hello Big John!
+## Pass in a command to container
+```
+docker run -it <ECR>/<Container repo>:<tagname> python app.py --name "Hello AD demo passed to docker"
+# The output
+Hello AD demo passed to docker!
 ```
 
 ## Push to Amazon ECR
-
 1.  Create ECR repository
-
 
 ### More things Do
 
 * Lint the code with Github Actions (see the Makefile)
 * Automatically build the container after lint, and push to DockerHub or some other Container Registery
-
-
-
