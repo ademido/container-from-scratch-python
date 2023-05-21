@@ -19,6 +19,9 @@ jobs:
     - name: Lint Dockerfile
       run: |
         make lint
+    - name: Build docker
+      run: |
+        make build
 
     
     
