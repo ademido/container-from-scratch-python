@@ -15,15 +15,19 @@ This is building a container from scratch
 ### Run my newly built container
 > `docker run -it ad-demo python app.py --name "AD demo docker"`
 
+### Which docker runs command
+> `docker ps`
+
 ### Push to Docker Hub
 *Note:  You will need to change for your Docker Hub Repo*
-docker push noahgift/duke102:tagname
+`docker push <ECR>/<Container repo>:<tagname>`
+When repo generated, you have docker commands provided by AWS, in case you use ECR as docker repo
 
 ## Run it yourself
 
 ```bash
-docker pull noahgift/cloudapp:latest
-docker run -it noahgift/cloudapp bash 
+docker pull <ECR>/<Container repo>:<tagname>
+docker run -it <ECR>/<Container repo>:<tagname> bash 
 
 #then run python app.py --help
 ```
